@@ -20,4 +20,8 @@ for line in sys.stdin:
     line = line.rstrip()
     x += tonum(line)
 
+x = 0
+for line in sys.stdin:
+    x += tonum(line.rstrip())
+
 print(x)
