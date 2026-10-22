@@ -8,4 +8,7 @@ for line in sys.stdin:
     except ValueError:    #第3回で見たエラーの名前
          x += float(line)
 
+x = 0
+for line in sys.stdin:
+    x += tonum(line.rstrip())
 print(x)
