@@ -11,4 +11,5 @@ for line in sys.stdin:
 x = 0
 for line in sys.stdin:
     x += tonum(line.rstrip())
+
 print(x)
