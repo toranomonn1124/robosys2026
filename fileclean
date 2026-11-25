@@ -1,0 +1,17 @@
+
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Taro Suzuki
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import re
+
+for line in sys.stdin:
+    name = line.strip()
+
+    if name == "":
+        continue
+
+    name = re.sub(r"\s+", "_", name)
+
+    print(name)
