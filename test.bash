@@ -10,6 +10,8 @@ ng () {
 
 res=0
 
+chmod +x ./fileclean
+
 ### NORMAL INPUT ###
 out=$(printf "report.txt\n" | ./fileclean)
 [ "$?" = 0 ] || ng "$LINENO"
