@@ -39,3 +39,16 @@ out=$(printf "report.txt\nimage.png\n" | ./fileclean)
 
 [ "${res}" = 0 ] && echo OK
 exit "$res"
+
+### TAB CLEANING ###
+out=$(printf "my\treport.txt\n" | ./fileclean)
+[ "$?" = 0 ] || ng "$LINENO"
+[ "${out}" = "my_report.txt" ] || ng "$LINENO"
+
+### WHITESPACE ONLY ###
+out=$(printf "   \n" | ./fileclean)
+[ "$?" = 0 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+[ "${res}" = 0 ] && echo OK
+exit "$res"
